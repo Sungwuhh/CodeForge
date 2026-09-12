@@ -25,3 +25,10 @@ Open http://localhost:3000.
 3. Add isolated code execution for Python, JavaScript and C++.
 4. Add real AI API integration with scoped file/region permissions and diffs.
 5. Add project storage and collaboration.
+
+
+## Python runner
+
+The Run button now executes Python in a browser Web Worker using Pyodide 0.27.2. Pyodide is loaded from the jsDelivr CDN on the first run.
+
+This is an MVP client-side runner, not the final CodeForge security sandbox. It is suitable for basic Python execution and keeps the UI responsive by using a Web Worker. A production CodeForge runner should eventually move untrusted execution to an isolated server/container with strict CPU, memory, filesystem, process, and network limits.
